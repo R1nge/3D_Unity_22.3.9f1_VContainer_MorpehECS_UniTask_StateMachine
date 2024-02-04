@@ -1,3 +1,5 @@
+using _Assets.Scripts.Services.StateMachine;
+using VContainer;
 using VContainer.Unity;
 
 namespace _Assets.Scripts.CompositionRoot
