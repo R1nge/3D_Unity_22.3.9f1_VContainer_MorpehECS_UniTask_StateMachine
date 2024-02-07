@@ -2,6 +2,7 @@
 {
     public enum UIStateType : byte
     {
-        Game = 0
+        None = 0,
+        Game = 1
     }
 }
