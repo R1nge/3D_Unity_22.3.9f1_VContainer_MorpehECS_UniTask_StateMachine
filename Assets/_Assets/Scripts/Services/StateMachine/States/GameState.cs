@@ -1,6 +1,6 @@
 ﻿namespace _Assets.Scripts.Services.StateMachine.States
 {
-    public class GameState : IGameState
+    public class GameState : IState
     {
         private readonly GameStateMachine _stateMachine;
 
