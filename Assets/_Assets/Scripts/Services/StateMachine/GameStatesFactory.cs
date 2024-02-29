@@ -1,12 +1,19 @@
-﻿using _Assets.Scripts.Services.StateMachine.States;
+﻿using System;
+using _Assets.Scripts.Services.StateMachine.States;
 
 namespace _Assets.Scripts.Services.StateMachine
 {
     public class GameStatesFactory
     {
-        public IGameState CreateGameState(GameStateMachine stateMachine)
+        public IState CreateState(GameStateType gameStateType, GameStateMachine gameStateMachine)
         {
-            return new GameState(stateMachine);
+            switch (gameStateType)
+            {
+                case GameStateType.Game:
+                    return new GameState(gameStateMachine);
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(gameStateType), gameStateType, null);
+            }
         }
     }
 }
